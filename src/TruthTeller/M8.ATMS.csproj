@@ -7,7 +7,7 @@
     <ProjectGuid>{9D7F5371-166B-4379-A551-39F4F5882A46}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>M8.TruthTeller</RootNamespace>
+    <RootNamespace>M8.ATMS</RootNamespace>
     <AssemblyName>truth-teller</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -31,12 +31,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class.cs" />
@@ -59,9 +53,6 @@
     <Compile Include="TransactionalRollbackRecorder.cs" />
     <Compile Include="TruthRecorder.cs" />
     <Compile Include="TruthTeller.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="M8.ATMS.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M8.TruthTeller", "TruthTeller\M8.TruthTeller.csproj", "{9D7F5371-166B-4379-A551-39F4F5882A46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M8.ATMS", "src\TruthTeller\M8.ATMS.csproj", "{9D7F5371-166B-4379-A551-39F4F5882A46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M8.TruthTeller.UnitTest", "TruthTeller.UnitTest\M8.TruthTeller.UnitTest.csproj", "{026A6C2C-3D91-47D5-A4BC-149FAC2D9F96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M8.ATMS.UnitTest", "test\TruthTeller.UnitTest\M8.ATMS.UnitTest.csproj", "{026A6C2C-3D91-47D5-A4BC-149FAC2D9F96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

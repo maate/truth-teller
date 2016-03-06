@@ -1,4 +1,6 @@
-﻿using M8.TruthTeller.Nodes;
+﻿using System;
+
+using M8.TruthTeller.Nodes;
 
 using NUnit.Framework;
 

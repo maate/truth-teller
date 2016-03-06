@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using M8.TruthTeller.Nodes;
 
@@ -25,7 +26,7 @@ namespace M8.TruthTeller.UnitTest {
      {{E}}     \-->  ------- /      -------
      -------         |  k  |/
      |  E  |------>  -------
-     -------         
+     -------
      */ public void IntegratedExample() {
       SetupABr();
       Setupg();
@@ -37,6 +38,13 @@ namespace M8.TruthTeller.UnitTest {
       Setuph();
 
       AssertLabel( "h", "{ {A,D}, {B,D} }" );
+    }
+    
+    [Test]
+    public void SimpleTest() {
+      SetupABr();
+      AssertLabel( "r", "{ {A}, {B} }" );
+      Console.WriteLine(Informant.GetNode("r"  ).Label);
     }
 
     [Test]
