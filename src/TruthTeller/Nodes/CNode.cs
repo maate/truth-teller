@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace M8.TruthTeller.Nodes {
+namespace M8.ATMS.Nodes {
   /// <summary>
   ///   Consequent Node. The node of the datum that has been inferred by the inference engine.
   /// </summary>

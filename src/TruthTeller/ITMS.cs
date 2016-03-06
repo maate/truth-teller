@@ -1,6 +1,6 @@
-using M8.TruthTeller.Nodes;
+using M8.ATMS.Nodes;
 
-namespace M8.TruthTeller {
+namespace M8.ATMS {
   public interface ITMS {
     void Add( Node node );
 

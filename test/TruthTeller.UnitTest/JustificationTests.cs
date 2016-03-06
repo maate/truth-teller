@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using M8.TruthTeller.Nodes;
+using M8.ATMS.Nodes;
 
 using NUnit.Framework;
 
-namespace M8.TruthTeller.UnitTest {
+namespace M8.ATMS.UnitTest {
   [TestFixture]
   public class JustificationTests : TestBase {
 

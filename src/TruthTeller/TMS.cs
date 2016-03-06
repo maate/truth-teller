@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
-using M8.TruthTeller.Nodes;
+using M8.ATMS.Nodes;
 
-using Environment = M8.TruthTeller.Nodes.Environment;
+using Environment = M8.ATMS.Nodes.Environment;
 
-namespace M8.TruthTeller {
+namespace M8.ATMS {
   public class TMS : ITMS {
     private readonly List<Justification> _justifications = new List<Justification>();
 

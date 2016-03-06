@@ -1,4 +1,4 @@
-﻿namespace M8.TruthTeller.Nodes {
+﻿namespace M8.ATMS.Nodes {
   public class Contradiction : CNode {
     internal Contradiction()
       : base( "⊥" ) {

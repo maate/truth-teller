@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace M8.TruthTeller.Nodes {
+namespace M8.ATMS.Nodes {
   public class Conjunction<T> : IEnumerable<T> {
     public Conjunction() {
       Values = new HashSet<T>();

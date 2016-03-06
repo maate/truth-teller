@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace M8.TruthTeller.Nodes {
+namespace M8.ATMS.Nodes {
   public abstract class Datum: IEquatable<string> {
     protected Datum( string id ) {
       Id = id;

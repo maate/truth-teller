@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
-using M8.TruthTeller.Nodes;
+using M8.ATMS.Nodes;
 
-namespace M8.TruthTeller {
+namespace M8.ATMS {
   /// <summary>
   ///   A class is used to group nodes. Zero or more nodes can belong to a class.
   /// </summary>

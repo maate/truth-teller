@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace M8.TruthTeller.Nodes {
+namespace M8.ATMS.Nodes {
   /// <summary>
   ///   A set of assumption nodes.
   /// </summary>

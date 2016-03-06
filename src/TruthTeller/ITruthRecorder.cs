@@ -1,8 +1,8 @@
 using System;
 
-using M8.TruthTeller.Nodes;
+using M8.ATMS.Nodes;
 
-namespace M8.TruthTeller {
+namespace M8.ATMS {
   public interface ITruthRecorder : IDisposable {
     /// <summary>
     ///   Adds an assumption node to the TMS

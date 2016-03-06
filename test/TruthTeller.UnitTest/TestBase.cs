@@ -1,12 +1,10 @@
-﻿using System;
-
-using M8.TruthTeller.Nodes;
+﻿using M8.ATMS.Nodes;
 
 using NUnit.Framework;
 
-namespace M8.TruthTeller.UnitTest {
+namespace M8.ATMS.UnitTest {
   public abstract class TestBase {
-    protected TruthTeller Informant;
+    protected ATMS.TruthTeller Informant;
 
     protected TruthRecorder Recorder;
 
@@ -14,7 +12,7 @@ namespace M8.TruthTeller.UnitTest {
     public void SetUp() {
       var tms = new TMS();
       Recorder = new TruthRecorder( tms );
-      Informant = new TruthTeller( tms );
+      Informant = new ATMS.TruthTeller( tms );
     }
 
     protected void SetupABr() {

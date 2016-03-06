@@ -1,4 +1,4 @@
-﻿namespace M8.TruthTeller.Nodes {
+﻿namespace M8.ATMS.Nodes {
   public enum NodeType {
     /// <summary>
     ///   The TMS logically infers the node.

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace M8.TruthTeller.Nodes {
+namespace M8.ATMS.Nodes {
   /// <summary>
   ///   A justiﬁcation is a condition on a node and consists of three parts:
   ///   1. Consequent. The node of the datum that has been inferred by the inference engine.

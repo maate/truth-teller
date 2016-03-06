@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace M8.TruthTeller.Nodes {
+namespace M8.ATMS.Nodes {
   /// <summary>
   ///   A label of a node comprises environments where the node holds in.
   /// </summary>

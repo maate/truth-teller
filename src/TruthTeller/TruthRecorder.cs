@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-using M8.TruthTeller.Nodes;
+using M8.ATMS.Nodes;
 
-namespace M8.TruthTeller {
+namespace M8.ATMS {
   public class TruthRecorder : ITruthRecorder {
     private readonly ITMS _tms;
 
