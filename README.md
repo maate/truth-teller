@@ -33,8 +33,7 @@ Read out information by using a `TruthTeller`:
 
     TruthTeller informant = new TruthTeller( tms );
     var node = Informant.GetNode( "r" );
-    Console.WriteLine( node.Label );
-    
+    Console.WriteLine( node.Label ); // prints: { {A}, {B} }
      
 ## License
 The MIT License (MIT)
