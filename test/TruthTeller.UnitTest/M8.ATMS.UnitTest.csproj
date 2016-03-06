@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>M8.ATMS.UnitTest</RootNamespace>
-    <AssemblyName>M8.TruthTeller.UnitTest</AssemblyName>
+    <AssemblyName>M8.ATMS.UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
