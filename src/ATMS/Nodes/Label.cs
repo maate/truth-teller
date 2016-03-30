@@ -56,6 +56,9 @@ namespace M8.ATMS.Nodes {
     /// </summary>
     /// <param name="labels"></param>
     public void Conjoin( Conjunction<Label> labels ) {
+      if ( !labels.Any() || labels.All( l => !l.Any() ) ) {
+        return; // nothing to join with
+      }
       foreach ( Label label in labels ) {
         Duplicate( label.Count );
         if ( Count == 0 ) {

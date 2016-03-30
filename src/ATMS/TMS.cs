@@ -43,15 +43,24 @@ namespace M8.ATMS {
       _justifications.Add( j );
     }
 
-    private void UpdateLabel( Justification j, Node consequent ) {
+    private void UpdateLabel( Justification j, Node consequent, Func<ANode, bool> pred = null ) {
       Conjunction<Label> antecedentLabels = LookupAntecedentLabels( j.Antecedents );
+      antecedentLabels = FilterByPredicate( pred, antecedentLabels );
       var label = new Label();
+
       label.Conjoin( antecedentLabels );
 
       FilterNogoodSets( j, label );
 
       consequent.Label.Disjoin( label );
       consequent.Label.RemoveSubsumed();
+    }
+
+    private static Conjunction<Label> FilterByPredicate( Func<ANode, bool> pred, Conjunction<Label> antecedentLabels ) {
+      if ( pred != null ) {
+        antecedentLabels = new Conjunction<Label>( antecedentLabels.Where( l => l.All( env => env.All( pred ) ) ) );
+      }
+      return antecedentLabels;
     }
 
     private void FilterNogoodSets( Justification j, Label label ) {
@@ -161,11 +170,11 @@ namespace M8.ATMS {
         throw new InvalidOperationException(
           "Cannot retract a contradiction. Contradicionts are justified nodes. Retract the assumption that causes the contradiction instead." );
       }
-      Update( nodeId, true );
+      Update( nodeId, nodeId, true );
       _nodes.Remove( nodeId );
     }
 
-    private void Update( string nodeId, bool retract = false ) {
+    private void Update( string nodeId, string retractBase, bool retract = false ) {
       var justifications = ImmediatelyJustifies( nodeId );
       var cnodes = justifications.Select( j => j.Consequent );
 
@@ -178,14 +187,19 @@ namespace M8.ATMS {
           if ( retract ) {
             FilterRetractedAntecedents( nodeId, justification );
           }
-          UpdateLabel( justification, node );
+          UpdateLabel( justification, node, n => n != retractBase );
           if ( !justification.Antecedents.Any() ) {
             markedForDeletion.Add( justification );
           }
         }
-        Update( cnode, justifiedBy.All( j => !j.Antecedents.Any() ) );
+        Update( cnode, retractBase, node.Label.Equals( Label.NoEnvironment ) && justifiedBy.All( j => j.Antecedents.All( i => i.Id == nodeId ) ) );
+
         foreach ( var justification in markedForDeletion ) {
           _justifications.Remove( justification );
+        }
+
+        if ( !GetImmediateJustificationFor( cnode ).Any() ) {
+          _nodes.Remove( cnode );
         }
       }
     }
